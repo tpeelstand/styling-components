@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- React Library -->
+     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+     <!-- React DOM -->
+     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+     <!-- BABEL Library -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     
+    <title>Functional Stateless Components</title>
+</head>
+<body>
+
+    <!-- html div for rendering react -->
+    <div id="app">React has not rendered yet.</div>
+
+    <script type="text/babel">
+        // Component #1
+        const ColorRed = function () {
+            const redStyle = {
+                width: 150,
+                backgroundColor: "red",
+                textAlign: "center",
+                padding: 10,
+                color: "white"
+            }
+            return(
+                <h1 style={redStyle}>Red</h1>
+            );
+        }
+
+        // Component #2
+        const ColorOrange = function () {
+            const orangeStyle = {
+                width: 150,
+                backgroundColor: "orange",
+                textAlign: "center",
+                padding: 10,
+                color: "white"
+            }
+            return (
+                <h1 style={orangeStyle}>Orange</h1>
+            );
+        }
+
+        // Component #3
+        const ColorYellow = function () {
+            const yellowStyle = {
+                width: 150,
+                backgroundColor: "yellow",
+                textAlign: "center",
+                padding: 10,
+                color: "black"
+            }
+            return(
+                <h1 style={yellowStyle}>Yellow</h1>
+            );
+        }
+
+        // Component #4
+        const ColorGreen = function () {
+            const greenStyle = {
+                width: 150,
+                backgroundColor: "green",
+                textAlign: "center",
+                padding: 10,
+                color: "white"
+            }
+            return(
+                <h1 style={greenStyle}>Green</h1>
+            );
+        }
+
+        // Component #5
+        const ColorBlue = function () {
+            const blueStyle = {
+                width: 150,
+                backgroundColor: "blue",
+                textAlign: "center",
+                padding: 10,
+                color: "white"
+            }
+            return(
+                <h1 style={blueStyle}>Blue</h1>
+            );
+        }
+
+        // Component #6
+        const ColorIndigo = function () {
+            const indigoStyle = {
+                width: 150,
+                backgroundColor: "indigo",
+                textAlign: "center",
+                padding: 10,
+                color: "white"
+            }
+            return(
+                <h1 style={indigoStyle}>Indigo</h1>
+            );
+        }
+
+        // Component #7
+        const ColorViolet = function () {
+            const violetStyle = {
+                width: 150,
+                backgroundColor: "violet",
+                textAlign: "center",
+                padding: 10,
+                color: "black"
+            }
+            return(
+                <h1 style={violetStyle}>Violet</h1>
+            );
+        }
+
+        // Render Components
+        ReactDOM.render(
+        <div>
+            <ColorRed/>
+            <ColorOrange/>
+            <ColorYellow/>
+            <ColorGreen/>
+            <ColorBlue/>
+            <ColorIndigo/>
+            <ColorViolet/>
+        </div>,
+        document.getElementById("app")
+        );
+    </script>
+</body>
+</html>
