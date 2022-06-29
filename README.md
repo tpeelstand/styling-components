@@ -1,2 +1,3 @@
 # styling-components
-Styling components
+
+Here is how to keep your styles with your components.
