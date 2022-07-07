@@ -17,20 +17,18 @@
     <div id="app">React has not rendered yet.</div>
 
     <script type="text/babel">
-        class ColorSpectrum extends React.Component {
-            render() {
-                const colorStyle = {
-                    backgroundColor: this.props.bgcolor,
-                    fontSize: 60,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                    padding: 100,
-                    color: this.props.color
+        const ColorSpectrum = function(props) {
+            const colorStyle = {
+                backgroundColor: props.bgcolor,
+                fontSize: 60,
+                fontWeight: 'bold',
+                textAlign: 'center',
+                padding: 100,
+                color: props.color
                 }
-                return (
-                    <div style={colorStyle}>{this.props.name}!</div>
-                );
-            }
+            return(
+                <div style={colorStyle}>{props.name}</div>
+            );
         }
 
         ReactDOM.render(
