@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- React Library -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <!-- React DOM -->
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- BABEL Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <title>Color Specturm Refactor</title>
+    <style>
+        body, * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">React has not rendered yet.</div>
+
+    <script type="text/babel">
+
+        // Colors Component
+        const ColorSpectrum = function(props) {
+                /* Dispaly the Color Name */
+                const colorItems = props.colors.map(function(color) {
+                    const colorStyle = {
+                        backgroundColor: color.color,
+                        color: color.text,
+                        fontSize: 60,
+                        fontWeight: 'bold',
+                        textAlign: 'center',
+                        padding: 32,
+                    };
+                    return <div style={colorStyle} key={color.id}>{color.name}</div>
+                })
+            return(
+                <div>{colorItems}</div>
+            );
+        }
+
+        // Colors Array
+        const colors = [
+            {id: 1, color:"red", name: "red", text: "black"},
+            {id: 2, color:"orange", name: "orange", text: "black"},
+            {id: 3, color:"yellow", name: "yellow", text: "black"},
+            {id: 4, color:"green", name: "green", text: "black"},
+            {id: 5, color:"blue", name: "blue", text: "white"},
+            {id: 6, color:"indigo", name: "indigo", text: "white"},
+            {id: 7, color:"violet", name: "violet", text: "black"},
+            {id: 8, color:"gold", name: "gold", text: "black"},
+            {id: 7, color:"black", name: "black", text: "white"}
+        ]
+
+        // Render colors with background to the DOM
+        ReactDOM.render(
+            <ColorSpectrum colors={colors} />,
+            document.getElementById('app')
+        )
+    </script>
+</body>
+</html>
